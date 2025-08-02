@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     profile: str
     log_level: str
     db_url: str
+    db_schema: str
 
 
 env_profile = os.environ.get("ACTIVE_PROFILE")
