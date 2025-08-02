@@ -1,7 +1,9 @@
 [project]
 name = "cloudmart"
 version = "0.1.0"
-description = "Add your description here"
+description = "SaaS project landing page"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+]
