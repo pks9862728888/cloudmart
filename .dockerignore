@@ -36,6 +36,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.venv/
 
 # IDE
 .vscode/
@@ -56,6 +57,11 @@ Thumbs.db
 # Docker
 Dockerfile
 .dockerignore
+
+# Other files
+.flake8
+liquibase.properties
+db/
 
 # Documentation
 README.md
