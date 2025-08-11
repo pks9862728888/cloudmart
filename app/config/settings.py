@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     log_level: str
     db_url: str
     db_schema: str
+    frontend_base_dir: str = "public"
 
 
 env_profile = os.environ.get("ACTIVE_PROFILE")
