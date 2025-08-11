@@ -8,9 +8,13 @@ router = APIRouter(tags=["frontend"])
 
 @router.get("/")
 @router.get("/{page:str}")
-async def serve_spa(page: str):
-    print(f"{page}")
+async def serve_spa(page: str = ""):
+    print(f"Requested page: {page}")
     file_path = f"public/{page}"
+
+    # Handle base path
+    if page == "":
+        return FileResponse("public/index.html")
 
     # Check if resource exists
     if os.path.exists(file_path) and os.path.isfile(file_path):

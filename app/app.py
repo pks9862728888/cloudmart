@@ -13,4 +13,4 @@ app = FastAPI()
 app.mount("/_next/", StaticFiles(directory="public/_next"), name="nextjs_assets")
 app.mount("/static", StaticFiles(directory="public"), name="static")
 app.include_router(project_router.router, prefix="/api/v1/project")
-app.include_router(frontend_router.router, prefix="")
+app.include_router(frontend_router.router, prefix="")  # should be the last always
