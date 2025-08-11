@@ -10,7 +10,15 @@ logger.info(f"Active profile is: {settings.get_active_profile()}")
 db_connection.test_db_connection()
 
 app = FastAPI()
-app.mount("/_next/", StaticFiles(directory="public/_next"), name="nextjs_assets")
-app.mount("/static", StaticFiles(directory="public"), name="static")
+app.mount(
+    "/_next/",
+    StaticFiles(directory=f"{settings.settings.frontend_base_dir}/_next"),
+    name="nextjs_assets",
+)
+app.mount(
+    "/static",
+    StaticFiles(directory=f"{settings.settings.frontend_base_dir}"),
+    name="static",
+)
 app.include_router(project_router.router, prefix="/api/v1/project")
 app.include_router(frontend_router.router, prefix="")  # should be the last always
