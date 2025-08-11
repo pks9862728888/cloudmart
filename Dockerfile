@@ -1,34 +1,57 @@
-# Use Python 3.13 slim image as base
-FROM python:3.13-slim AS base
-LABEL version="0.0.1-SNAPSHOT"
+# Build stage
+FROM python:3.13-slim AS builder
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PYTHONPATH=/app \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
-# Install system dependencies
+# Install system dependencies for building
 RUN apt-get update && apt-get install -y \
     gcc \
     libpq-dev \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
-
-# Create non-root user for security
-RUN adduser --disabled-password --gecos '' appuser
-
-# Set work directory and change ownership
-WORKDIR /app
-RUN chown appuser:appuser /app
 
 # Install Python dependencies
 RUN pip install --upgrade pip && pip install uv
 
+# Set work directory and change ownership
+WORKDIR /app
+
 # Install Python dependencies using uv
 COPY --chown=appuser:appuser pyproject.toml uv.lock ./
-USER appuser
 RUN uv sync --frozen
+
+# Production stage
+FROM python:3.13-slim AS runtime
+LABEL version="0.0.1-SNAPSHOT"
+
+# Set runtime environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app \
+    PATH="/app/.venv/bin:$PATH"
+
+# Install only runtime system dependencies
+RUN apt-get update && apt-get install -y \
+    libpq5 \
+    curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
+
+# Install Python dependencies
+RUN pip install uv
+
+# Create non-root user for security
+RUN adduser --disabled-password --gecos '' appuser
+WORKDIR /app
+RUN chown appuser:appuser /app
+USER appuser
+
+# Copy virtual environment from builder stage
+COPY --from=builder /app/.venv /app/.venv
 
 # Copy application code
 COPY --chown=appuser:appuser . .
