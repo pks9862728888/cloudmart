@@ -1,5 +1,5 @@
 # Build stage
-FROM python:3.13-slim AS builder
+FROM python:3.13-alpine AS builder
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -8,11 +8,12 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
 # Install system dependencies for building
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     gcc \
-    libpq-dev \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
+    musl-dev \
+    postgresql-dev \
+    libffi-dev \
+    build-base
 
 # Install Python dependencies
 RUN pip install --upgrade pip && pip install uv
@@ -25,7 +26,7 @@ COPY --chown=appuser:appuser pyproject.toml uv.lock ./
 RUN uv sync --frozen
 
 # Production stage
-FROM python:3.13-slim AS runtime
+FROM python:3.13-alpine AS runtime
 LABEL version="0.0.1-SNAPSHOT"
 
 # Set runtime environment variables
@@ -35,11 +36,10 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PATH="/app/.venv/bin:$PATH"
 
 # Install only runtime system dependencies
-RUN apt-get update && apt-get install -y \
-    libpq5 \
+RUN apk add --no-cache \
+    postgresql-libs \
     curl \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
+    && rm -rf /var/cache/apk/*
 
 # Install Python dependencies
 RUN pip install uv
