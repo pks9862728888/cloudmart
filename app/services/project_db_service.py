@@ -12,7 +12,8 @@ async def _get_all_projects(db: Session) -> list[DbProject]:
 
 async def get_all_projects(db: Session) -> list[Project]:
     """
-    Service that retrieves all projects from database and transform into exchange format
+    Service that retrieves all projects from database
+    and transform into exchange format
     """
     db_projects = await _get_all_projects(db)
     return [Project.model_validate(proj) for proj in db_projects]

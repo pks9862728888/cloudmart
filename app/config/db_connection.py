@@ -1,5 +1,4 @@
 from sqlalchemy import create_engine
-import os
 
 from sqlalchemy.orm import sessionmaker
 
@@ -20,6 +19,6 @@ def get_session():
 
 def test_db_connection():
     logger.info("Establishing connection with db...")
-    with db_engine.connect() as conn:
+    with db_engine.connect():
         logger.info("Connection with db success!")
         pass

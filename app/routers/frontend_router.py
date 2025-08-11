@@ -1,5 +1,5 @@
 import os
-from fastapi import APIRouter, Path
+from fastapi import APIRouter
 from fastapi.responses import FileResponse
 
 from app.config.logger import logger
