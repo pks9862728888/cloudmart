@@ -2,6 +2,7 @@ import os
 from fastapi import APIRouter, Path
 from fastapi.responses import FileResponse
 
+from app.config.logger import logger
 from app.config.settings import settings
 
 
@@ -11,7 +12,7 @@ router = APIRouter(tags=["frontend"])
 @router.get("/")
 @router.get("/{page:str}")
 async def serve_spa(page: str = ""):
-    print(f"Requested page: {page}")
+    logger.info(f"Requested resource: {page}")
     file_path = f"{settings.frontend_base_dir}/{page}"
 
     # Handle base path
