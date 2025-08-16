@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout';
+import Layout from '@/app/_components/Layout';
 
 const ProfileIcon = () => (
   <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">

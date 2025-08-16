@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout';
+import Layout from '@/app/_components/Layout';
 
 // Social media icons
 const TwitterIcon = () => (
