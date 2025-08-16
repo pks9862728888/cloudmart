@@ -15,14 +15,8 @@ export default function Home() {
             Making work effortless and productive
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed mb-6">
-            Empowering individuals and businesses with software applications that maximize productivity and simplify everyday work.
+            Empowering individuals and businesses with software applications that maximize productivity, track goals and simplify everyday work.
           </p>
-          <Link 
-            href="/about" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-          >
-            Learn More About Us
-          </Link>
         </section>
 
         {/* Quick Overview */}
@@ -30,17 +24,11 @@ export default function Home() {
           <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6">
             What We Do
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid gap-6">
             <div className="bg-slate-800 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-white mb-3">Productivity Solutions</h3>
               <p className="text-slate-300">
-                We develop software that streamlines workflows and enhances team collaboration.
-              </p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-3">Business Applications</h3>
-              <p className="text-slate-300">
-                Custom solutions designed to meet the unique needs of modern businesses.
+                We create productivity software that empowers individuals to track goals, boost efficiency, and achieve more every day.
               </p>
             </div>
           </div>
