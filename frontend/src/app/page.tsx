@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-white mb-8">
           Welcome to Cloudmart
         </h1>
 
         {/* Hero Section */}
         <section className="mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
             Making work effortless and productive
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed mb-6">
@@ -21,12 +21,12 @@ export default function Home() {
 
         {/* Quick Overview */}
         <section className="mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-6">
             What We Do
           </h2>
           <div className="grid gap-6">
             <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-3">Productivity Solutions</h3>
+              <h3 className="text-lg font-semibold text-white mb-3">Productivity Solutions</h3>
               <p className="text-slate-300">
                 We create productivity software that empowers individuals to track goals, boost efficiency, and achieve more every day.
               </p>
@@ -36,7 +36,7 @@ export default function Home() {
 
         {/* Call to Action */}
         <section className="text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
             Ready to transform your workflow?
           </h2>
           <p className="text-lg text-slate-300 mb-6">
