@@ -29,13 +29,13 @@ export default function About() {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-white mb-8">
           About Cloudmart
         </h1>
 
         {/* Mission Section */}
         <section className="mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
             Our Mission: Making work effortless and productive.
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
@@ -45,7 +45,7 @@ export default function About() {
 
         {/* Vision Section */}
         <section className="mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
             Our Vision: Work Smarter. Live Better.
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
@@ -55,7 +55,7 @@ export default function About() {
 
         {/* Connect Section */}
         <section className="mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-6">
             Connect With Us
           </h2>
           <div className="flex space-x-4">
@@ -76,7 +76,7 @@ export default function About() {
 
         {/* Legal Section */}
         <section>
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
             Legal Entity & Compliance
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">

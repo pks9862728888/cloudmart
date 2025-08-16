@@ -10,7 +10,7 @@ export default function Profile() {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-white mb-8">
           Profile
         </h1>
         
@@ -20,7 +20,7 @@ export default function Profile() {
               <ProfileIcon />
             </div>
             <div>
-              <h2 className="text-2xl font-semibold text-white">John Doe</h2>
+              <h2 className="text-lg font-semibold text-white">John Doe</h2>
               <p className="text-slate-300">john.doe@example.com</p>
               <p className="text-slate-400 text-sm">Member since 2024</p>
             </div>
@@ -28,11 +28,11 @@ export default function Profile() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-slate-700 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-white mb-2">Account Settings</h3>
+              <h3 className="text-base font-semibold text-white mb-2">Account Settings</h3>
               <p className="text-slate-300 text-sm">Manage your account preferences and security settings.</p>
             </div>
             <div className="bg-slate-700 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-white mb-2">Preferences</h3>
+              <h3 className="text-base font-semibold text-white mb-2">Preferences</h3>
               <p className="text-slate-300 text-sm">Customize your Cloudmart experience and notifications.</p>
             </div>
           </div>
