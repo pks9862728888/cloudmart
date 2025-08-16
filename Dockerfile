@@ -27,7 +27,7 @@ RUN uv sync --frozen
 
 # Production stage
 FROM python:3.13-alpine AS runtime
-LABEL version="0.0.1-SNAPSHOT"
+LABEL version="0.0.2-SNAPSHOT"
 
 # Set runtime environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
