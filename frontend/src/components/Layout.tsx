@@ -75,14 +75,16 @@ export default function Layout({ children }: LayoutProps) {
           <nav className="flex-1 px-6 py-6">
             <ul className="space-y-2">
               {navigation.map((item) => {
-                const isActive = pathname === item.href;
+                const splitPathName = pathname.split("/");
+                const pathNamePrefix = "/" + splitPathName[1];
+                const isActive = pathNamePrefix === item.href;
                 return (
                   <li key={item.name}>
                     <Link
                       href={item.href}
                       className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                         isActive
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-green-600 text-white shadow-lg'
                           : 'text-slate-300 hover:bg-slate-700 hover:text-white'
                       }`}
                       onClick={() => setSidebarOpen(false)}
