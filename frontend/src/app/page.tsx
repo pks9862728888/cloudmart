@@ -25,7 +25,7 @@ export default function Home() {
             What We Do
           </h2>
           <div className="grid gap-6">
-            <div className="bg-slate-800 p-6 rounded-lg">
+            <div className="bg-slate-800/70 p-6 rounded-lg border border-slate-800/30">
               <h3 className="text-lg font-semibold text-white mb-3">Productivity Solutions</h3>
               <p className="text-slate-300">
                 We create productivity software that empowers individuals to track goals, boost efficiency, and achieve more every day.
@@ -51,7 +51,7 @@ export default function Home() {
             </Link>
             <Link 
               href="/applications" 
-              className="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              className="bg-blue-800/60 hover:bg-blue-700/60 text-white font-semibold py-3 px-6 rounded-lg transition-colors border border-blue-700/40"
             >
               Our Applications
             </Link>
