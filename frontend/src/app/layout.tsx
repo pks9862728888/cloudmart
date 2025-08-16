@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Cloudmart - About Us",
-  description: "Cloudmart is a cutting-edge AI-powered platform designed to revolutionize how businesses and individuals discover, manage, and utilize SaaS applications.",
+  description: "Cloudmart is a SaaS provider dedicated to helping individuals and businesses boost productivity and streamline daily tasks through powerful, user-friendly software solutions.",
 };
 
 export default function RootLayout({
