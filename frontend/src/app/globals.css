@@ -42,6 +42,7 @@ body {
   bottom: -5em; /* Start below viewport */
 }
 
+/* Vertical rising bubbles */
 .bubble:nth-child(1) {
   width: 60px;
   height: 60px;
@@ -82,12 +83,14 @@ body {
   animation-delay: 1.2s;
 }
 
+/* Diagonal moving bubbles (will collide with vertical ones) */
 .bubble:nth-child(6) {
   width: 35px;
   height: 35px;
   left: 15%;
   animation-duration: 8.5s;
   animation-delay: 1.5s;
+  animation-name: bubbleDiagonalRise;
 }
 
 .bubble:nth-child(7) {
@@ -96,6 +99,7 @@ body {
   left: 85%;
   animation-duration: 9.5s;
   animation-delay: 1.8s;
+  animation-name: bubbleDiagonalRise;
 }
 
 .bubble:nth-child(8) {
@@ -104,6 +108,7 @@ body {
   left: 30%;
   animation-duration: 7.5s;
   animation-delay: 2.1s;
+  animation-name: bubbleDiagonalRise;
 }
 
 .bubble:nth-child(9) {
@@ -112,6 +117,7 @@ body {
   left: 60%;
   animation-duration: 10.5s;
   animation-delay: 2.4s;
+  animation-name: bubbleDiagonalRise;
 }
 
 .bubble:nth-child(10) {
@@ -120,6 +126,7 @@ body {
   left: 40%;
   animation-duration: 8.5s;
   animation-delay: 2.7s;
+  animation-name: bubbleHorizontalRise;
 }
 
 .bubble:nth-child(11) {
@@ -128,6 +135,7 @@ body {
   left: 75%;
   animation-duration: 9.5s;
   animation-delay: 3s;
+  animation-name: bubbleHorizontalRise;
 }
 
 .bubble:nth-child(12) {
@@ -136,8 +144,10 @@ body {
   left: 25%;
   animation-duration: 8.5s;
   animation-delay: 3.3s;
+  animation-name: bubbleHorizontalRise;
 }
 
+/* Vertical rise animation */
 @keyframes bubbleRise {
   0% {
     transform: translateY(0) scale(0.3);
@@ -151,6 +161,48 @@ body {
   }
   100% {
     transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Diagonal rise animation (moves right while rising) */
+@keyframes bubbleDiagonalRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.3);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(20px) scale(0.7);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(40px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Horizontal rise animation (moves left while rising) */
+@keyframes bubbleHorizontalRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.3);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(-20px) scale(0.7);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-40px) scale(1);
     opacity: 0;
   }
 }
