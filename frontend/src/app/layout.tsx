@@ -105,6 +105,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#1e293b" />
         <meta name="theme-color" content="#1e293b" />
+        <meta name="mobile-web-app-capable" content="yes"/>
         
         {/* Structured Data for Rich Snippets */}
         <script
