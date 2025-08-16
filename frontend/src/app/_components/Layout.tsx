@@ -52,7 +52,21 @@ export default function Layout({ children }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen">
+      {/* Floating Bubbles */}
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+      <div className="bubble"></div>
+
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div 
@@ -130,7 +144,7 @@ export default function Layout({ children }: LayoutProps) {
         </div>
 
         {/* Page Content */}
-        <main className="p-6 lg:p-8">
+        <main className="p-6 lg:p-8 relative z-10">
           {children}
         </main>
       </div>

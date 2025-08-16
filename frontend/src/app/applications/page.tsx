@@ -8,7 +8,7 @@ export default function Applications() {
           Applications
         </h1>
         
-        <div className="bg-slate-800 rounded-lg p-8 text-center">
+        <div className="bg-slate-800/70 rounded-lg p-8 text-center border border-slate-800/30 hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer">
           <h2 className="text-lg font-semibold text-white mb-4">
             Coming Soon
           </h2>
