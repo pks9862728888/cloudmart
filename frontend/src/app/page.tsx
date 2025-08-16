@@ -36,20 +36,20 @@ export default function Home() {
         {/* Mission Section */}
         <section className="mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-            Our Mission: Simplifying SaaS Discovery
+            Our Mission: Making work effortless and productive.
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Cloudmart is a cutting-edge AI-powered platform designed to revolutionize how businesses and individuals discover, manage, and utilize SaaS applications. We provide a centralized hub for seamless application integration, ensuring optimal performance and accessibility across all your devices. Our mission is to empower users with intelligent tools that streamline their digital workflow and enhance productivity.
+            To empower individuals and businesses with software applications that maximize productivity and simplify everyday work.
           </p>
         </section>
 
         {/* Vision Section */}
         <section className="mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-            Our Vision: The Future of Application Management
+            Our Vision: Work Smarter. Live Better.
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            We envision a future where software discovery is intuitive, management is effortless, and every application works in perfect harmony. Cloudmart is committed to continuous innovation, leveraging advanced AI to predict user needs, personalize recommendations, and create an ecosystem where the right tools are always at your fingertips, fostering growth and efficiency for everyone.
+            To transform the way individuals and businesses work worldwide by delivering software solutions that unlock effortless productivity.
           </p>
         </section>
 
@@ -80,7 +80,7 @@ export default function Home() {
             Legal Entity & Compliance
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Cloudmart operates under [Legal Company Name], a registered entity in [Country/State]. We are committed to upholding the highest standards of data privacy, security, and regulatory compliance. Our operations adhere strictly to global data protection regulations, including GDPR and CCPA, ensuring a secure and trustworthy environment for all our users. For detailed legal terms and privacy policies, please refer to our dedicated legal section.
+            Cloudmart is currently in the process of legal entity registration. Full company details will be updated upon completion.
           </p>
         </section>
       </div>
