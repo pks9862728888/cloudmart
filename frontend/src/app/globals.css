@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gradient-start: #2b4f8a;
+  --gradient-end: #11192d;
 }
 
 @theme inline {
@@ -20,7 +22,9 @@
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(ellipse closest-side at 35% 40%, var(--gradient-start) 0%, var(--gradient-end) 120%);
+  background-attachment: fixed;
+  min-height: 100vh;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
