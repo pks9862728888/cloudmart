@@ -84,7 +84,7 @@ export default function Layout({ children }: LayoutProps) {
                       href={item.href}
                       className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                         isActive
-                          ? 'bg-green-600 text-white shadow-lg'
+                          ? 'bg-blue-400 text-white shadow-lg'
                           : 'text-slate-300 hover:bg-slate-700 hover:text-white'
                       }`}
                       onClick={() => setSidebarOpen(false)}
