@@ -156,7 +156,7 @@ body {
   10% {
     opacity: 0.8;
   }
-  90% {
+  95% {
     opacity: 0.8;
   }
   100% {
@@ -174,10 +174,7 @@ body {
   10% {
     opacity: 0.8;
   }
-  50% {
-    transform: translateY(-50vh) translateX(20px) scale(0.7);
-  }
-  90% {
+  95% {
     opacity: 0.8;
   }
   100% {
@@ -195,10 +192,7 @@ body {
   10% {
     opacity: 0.8;
   }
-  50% {
-    transform: translateY(-50vh) translateX(-20px) scale(0.7);
-  }
-  90% {
+  95% {
     opacity: 0.8;
   }
   100% {
