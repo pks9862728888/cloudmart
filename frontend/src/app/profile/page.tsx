@@ -14,7 +14,7 @@ export default function Profile() {
           Profile
         </h1>
         
-        <div className="bg-slate-800/70 rounded-lg p-8 border border-slate-800/30">
+        <div className="bg-slate-800/70 rounded-lg p-8 border border-slate-800/30 hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out">
           <div className="flex items-center mb-6">
             <div className="w-20 h-20 bg-slate-700/60 rounded-full flex items-center justify-center mr-6">
               <ProfileIcon />
@@ -27,11 +27,11 @@ export default function Profile() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-slate-900/60 rounded-lg p-4 border border-slate-900/30">
+            <div className="bg-slate-900/60 rounded-lg p-4 border border-slate-900/30 hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer">
               <h3 className="text-base font-semibold text-white mb-2">Account Settings</h3>
               <p className="text-slate-300 text-sm">Manage your account preferences and security settings.</p>
             </div>
-            <div className="bg-slate-900/60 rounded-lg p-4 border border-slate-900/30">
+            <div className="bg-slate-900/60 rounded-lg p-4 border border-slate-900/30 hover:transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer">
               <h3 className="text-base font-semibold text-white mb-2">Preferences</h3>
               <p className="text-slate-300 text-sm">Customize your Cloudmart experience and notifications.</p>
             </div>
